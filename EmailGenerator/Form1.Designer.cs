@@ -28,61 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.RelaseNotesList = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ClearReleaseNotesBttn = new System.Windows.Forms.Button();
+            this.GetReleaseNotesBttn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.DataTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NotesBox = new System.Windows.Forms.TextBox();
+            this.SendBttn = new System.Windows.Forms.Button();
+            this.DraftBttn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.ClearAttachmentsBttn = new System.Windows.Forms.Button();
+            this.GetAttachmentsBttn = new System.Windows.Forms.Button();
+            this.AttachmentsList = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.DataTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // RelaseNotesList
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.RelaseNotesList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
+            this.RelaseNotesList.BackColor = System.Drawing.SystemColors.Control;
+            this.RelaseNotesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RelaseNotesList.FormattingEnabled = true;
+            this.RelaseNotesList.HorizontalScrollbar = true;
+            this.RelaseNotesList.Items.AddRange(new object[] {
             "Release Notes",
             "Clear this at load",
             "Just for testing"});
-            this.listBox1.Location = new System.Drawing.Point(5, 9);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(123, 91);
-            this.listBox1.TabIndex = 0;
+            this.RelaseNotesList.Location = new System.Drawing.Point(5, 9);
+            this.RelaseNotesList.Name = "RelaseNotesList";
+            this.RelaseNotesList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RelaseNotesList.Size = new System.Drawing.Size(123, 91);
+            this.RelaseNotesList.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.ClearReleaseNotesBttn);
+            this.panel1.Controls.Add(this.GetReleaseNotesBttn);
+            this.panel1.Controls.Add(this.RelaseNotesList);
             this.panel1.Location = new System.Drawing.Point(233, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(135, 132);
             this.panel1.TabIndex = 1;
+            // 
+            // ClearReleaseNotesBttn
+            // 
+            this.ClearReleaseNotesBttn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ClearReleaseNotesBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearReleaseNotesBttn.Location = new System.Drawing.Point(68, 103);
+            this.ClearReleaseNotesBttn.Name = "ClearReleaseNotesBttn";
+            this.ClearReleaseNotesBttn.Size = new System.Drawing.Size(62, 23);
+            this.ClearReleaseNotesBttn.TabIndex = 6;
+            this.ClearReleaseNotesBttn.Text = "Clear";
+            this.ClearReleaseNotesBttn.UseVisualStyleBackColor = true;
+            this.ClearReleaseNotesBttn.Click += new System.EventHandler(this.ClearReleaseNotesBttn_Click);
+            // 
+            // GetReleaseNotesBttn
+            // 
+            this.GetReleaseNotesBttn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.GetReleaseNotesBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetReleaseNotesBttn.Location = new System.Drawing.Point(3, 103);
+            this.GetReleaseNotesBttn.Name = "GetReleaseNotesBttn";
+            this.GetReleaseNotesBttn.Size = new System.Drawing.Size(62, 23);
+            this.GetReleaseNotesBttn.TabIndex = 6;
+            this.GetReleaseNotesBttn.Text = "Get";
+            this.GetReleaseNotesBttn.UseVisualStyleBackColor = true;
+            this.GetReleaseNotesBttn.Click += new System.EventHandler(this.GetReleaseNotesBttn_Click);
             // 
             // label1
             // 
@@ -94,17 +120,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Release Notes";
             // 
-            // textBox1
+            // EmailBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 253);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "This will be the body of the email.\r\n\r\nThis will give a basic look at the email b" +
+            this.EmailBox.BackColor = System.Drawing.SystemColors.Control;
+            this.EmailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmailBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmailBox.Location = new System.Drawing.Point(3, 3);
+            this.EmailBox.Multiline = true;
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(187, 253);
+            this.EmailBox.TabIndex = 3;
+            this.EmailBox.Text = "This will be the body of the email.\r\n\r\nThis will give a basic look at the email b" +
     "efor it is sent.\r\n";
             // 
             // label2
@@ -123,74 +149,30 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Controls.Add(this.DataTabs);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 302);
             this.panel2.TabIndex = 4;
             // 
-            // button1
+            // DataTabs
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Get";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(68, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(62, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(233, 290);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(65, 24);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Send";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(303, 290);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 24);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Draft";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DataTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(6, 9);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(201, 288);
-            this.tabControl1.TabIndex = 0;
+            this.DataTabs.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.DataTabs.Controls.Add(this.tabPage1);
+            this.DataTabs.Controls.Add(this.tabPage2);
+            this.DataTabs.Location = new System.Drawing.Point(6, 9);
+            this.DataTabs.Multiline = true;
+            this.DataTabs.Name = "DataTabs";
+            this.DataTabs.SelectedIndex = 0;
+            this.DataTabs.Size = new System.Drawing.Size(201, 288);
+            this.DataTabs.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.EmailBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -201,78 +183,108 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.NotesBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(269, 314);
+            this.tabPage2.Size = new System.Drawing.Size(193, 259);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Notes File";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // NotesBox
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 308);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "This will be a bunch of files brought into one txt file.\r\n\r\nThis will mainly be f" +
+            this.NotesBox.BackColor = System.Drawing.SystemColors.Control;
+            this.NotesBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NotesBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NotesBox.Location = new System.Drawing.Point(3, 3);
+            this.NotesBox.Multiline = true;
+            this.NotesBox.Name = "NotesBox";
+            this.NotesBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.NotesBox.Size = new System.Drawing.Size(187, 253);
+            this.NotesBox.TabIndex = 4;
+            this.NotesBox.Text = "This will be a bunch of files brought into one txt file.\r\n\r\nThis will mainly be f" +
     "or release notes.\r\n\r\nAdditional tabs may be created for aditional files.\r\n";
+            this.NotesBox.WordWrap = false;
+            // 
+            // SendBttn
+            // 
+            this.SendBttn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SendBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SendBttn.Location = new System.Drawing.Point(233, 290);
+            this.SendBttn.Name = "SendBttn";
+            this.SendBttn.Size = new System.Drawing.Size(65, 24);
+            this.SendBttn.TabIndex = 6;
+            this.SendBttn.Text = "Send";
+            this.SendBttn.UseVisualStyleBackColor = true;
+            this.SendBttn.Click += new System.EventHandler(this.SendBttn_Click);
+            // 
+            // DraftBttn
+            // 
+            this.DraftBttn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DraftBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DraftBttn.Location = new System.Drawing.Point(303, 290);
+            this.DraftBttn.Name = "DraftBttn";
+            this.DraftBttn.Size = new System.Drawing.Size(65, 24);
+            this.DraftBttn.TabIndex = 6;
+            this.DraftBttn.Text = "Draft";
+            this.DraftBttn.UseVisualStyleBackColor = true;
+            this.DraftBttn.Click += new System.EventHandler(this.DraftBttn_Click);
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.listBox2);
+            this.panel3.Controls.Add(this.ClearAttachmentsBttn);
+            this.panel3.Controls.Add(this.GetAttachmentsBttn);
+            this.panel3.Controls.Add(this.AttachmentsList);
             this.panel3.Location = new System.Drawing.Point(233, 153);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(135, 132);
             this.panel3.TabIndex = 1;
             // 
-            // button5
+            // ClearAttachmentsBttn
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(68, 103);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(62, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = true;
+            this.ClearAttachmentsBttn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ClearAttachmentsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearAttachmentsBttn.Location = new System.Drawing.Point(68, 103);
+            this.ClearAttachmentsBttn.Name = "ClearAttachmentsBttn";
+            this.ClearAttachmentsBttn.Size = new System.Drawing.Size(62, 23);
+            this.ClearAttachmentsBttn.TabIndex = 6;
+            this.ClearAttachmentsBttn.Text = "Clear";
+            this.ClearAttachmentsBttn.UseVisualStyleBackColor = true;
+            this.ClearAttachmentsBttn.Click += new System.EventHandler(this.ClearAttachmentsBttn_Click);
             // 
-            // button6
+            // GetAttachmentsBttn
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(3, 103);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(62, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Get";
-            this.button6.UseVisualStyleBackColor = true;
+            this.GetAttachmentsBttn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.GetAttachmentsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GetAttachmentsBttn.Location = new System.Drawing.Point(3, 103);
+            this.GetAttachmentsBttn.Name = "GetAttachmentsBttn";
+            this.GetAttachmentsBttn.Size = new System.Drawing.Size(62, 23);
+            this.GetAttachmentsBttn.TabIndex = 6;
+            this.GetAttachmentsBttn.Text = "Get";
+            this.GetAttachmentsBttn.UseVisualStyleBackColor = true;
+            this.GetAttachmentsBttn.Click += new System.EventHandler(this.GetAttachmentsBttn_Click);
             // 
-            // listBox2
+            // AttachmentsList
             // 
-            this.listBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AttachmentsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
+            this.AttachmentsList.BackColor = System.Drawing.SystemColors.Control;
+            this.AttachmentsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AttachmentsList.FormattingEnabled = true;
+            this.AttachmentsList.HorizontalScrollbar = true;
+            this.AttachmentsList.Items.AddRange(new object[] {
             "List files here",
             "Will attach these to email",
             "This txt is for testing"});
-            this.listBox2.Location = new System.Drawing.Point(5, 9);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(123, 91);
-            this.listBox2.TabIndex = 0;
+            this.AttachmentsList.Location = new System.Drawing.Point(5, 9);
+            this.AttachmentsList.Name = "AttachmentsList";
+            this.AttachmentsList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.AttachmentsList.Size = new System.Drawing.Size(123, 91);
+            this.AttachmentsList.TabIndex = 0;
             // 
             // label3
             // 
@@ -290,8 +302,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 322);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.DraftBttn);
+            this.Controls.Add(this.SendBttn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
@@ -300,10 +312,11 @@
             this.MinimumSize = new System.Drawing.Size(394, 360);
             this.Name = "Form1";
             this.Text = "Email Builder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.DataTabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -316,24 +329,24 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox RelaseNotesList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button ClearReleaseNotesBttn;
+        private System.Windows.Forms.Button GetReleaseNotesBttn;
+        private System.Windows.Forms.TabControl DataTabs;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox NotesBox;
+        private System.Windows.Forms.Button SendBttn;
+        private System.Windows.Forms.Button DraftBttn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button ClearAttachmentsBttn;
+        private System.Windows.Forms.Button GetAttachmentsBttn;
+        private System.Windows.Forms.ListBox AttachmentsList;
         private System.Windows.Forms.Label label3;
     }
 }
