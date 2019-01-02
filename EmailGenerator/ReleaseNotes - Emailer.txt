@@ -1,0 +1,25 @@
+﻿Change Notes - Emailer
+
+Emailer (0.0.1.1)
+Build 1 Release
+1.	Added release notes file list
+2.	Added release notes combining file
+3.	Added temp files logic
+4.	Added attachemnt list
+5.	Added email body layout display
+	a.	Can add text dynamicaly through textbox
+6.	Added Notes file view
+	a.	Need to update all note files
+7.	Added "Get" and "Clear" logic for attached files
+8.	Added email logic for SMTP
+9.	Added inline HTML logic for images
+10.	Added Change notes file
+11.	Added status update for emails sent
+12.	Added email list config file
+13.	Added adaptable send to list
+14.	Added attachment logic
+15.	Added cat facts API
+	a.	Adds random fact about cats to bottom of email
+16.	Added copy logic to relase notes on open
+
+NOTE: Added signature logic in the future
