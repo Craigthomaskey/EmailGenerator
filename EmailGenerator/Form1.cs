@@ -40,8 +40,14 @@ namespace EmailGenerator
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)        {            if (File.Exists(tempPath)) File.Delete(tempPath);        }
 
-        private void SendBttn_Click(object sender, EventArgs e) { Text = SendMail(); }
-
+        private void SendBttn_Click(object sender, EventArgs e)
+        {
+            Text = SendMail(false);
+        }
+        private void TestBttn_Click(object sender, EventArgs e)
+        {
+            Text = SendMail(true);
+        }
 
         void StartEmailBody()
         {
@@ -89,12 +95,7 @@ namespace EmailGenerator
         private void GetAttachmentsBttn_Click(object sender, EventArgs e) { AttachmentsList.Items.Clear(); GetAttachments(); }
         private void ClearAttachmentsBttn_Click(object sender, EventArgs e) { AttachmentsList.Items.Clear(); StartEmailBody(); }
 
-
-
-
-
-
-        string SendMail()
+        string SendMail(bool test)
         {
             try
             {
@@ -103,7 +104,10 @@ namespace EmailGenerator
                 for (int i = 0; i < list.Count; i++) EmailList = EmailList + ", " + list[i];
 
                 MailMessage message = new MailMessage();
-                message.To.Add(EmailList);
+
+                if (test) message.To.Add("craigthomaskey@gmail.com");
+                else message.To.Add(EmailList);
+
                 message.Subject = "Filler Results - " + DateTime.Now.ToString("dddd, MMMM dd") + DaySuffix();
                 message.From = new System.Net.Mail.MailAddress("craig.key@wiklundtradingllc.com");
                 message.IsBodyHtml = true;
@@ -120,28 +124,16 @@ namespace EmailGenerator
                 smtp.Send(message);
                 return "Email Sent";
             }
-            catch(Exception e)
-            {
-                return "Email Failed - " + e.ToString();
-            }
+            catch(Exception e)            {                return "Email Failed - " + e.ToString();            }
         }
 
         private AlternateView getEmbeddedImage(String filePath)
         {
             LinkedResource res = new LinkedResource(filePath);
             res.ContentId = "FillerResults" + DateTime.Now.ToString("yyy-MM-dd");
-            res.ContentType = new ContentType("image/bmp");
-
-            //string htmlBody = @"Filler results : <br /><br /><img src='cid:" + res.ContentId + @"'/><br /><br />" + AddedText;
-
+            res.ContentType = new ContentType("image/bmp");           
             string htmlBody = EmailBox.Text.Replace(Environment.NewLine, "<br />");
             htmlBody = htmlBody.Replace(Path.GetFileName(FillerResultsFile), "<img src='cid:" + res.ContentId + "'/>");
-
-
-
-
-
-
             AlternateView alternateView = AlternateView.CreateAlternateViewFromString(htmlBody, null, MediaTypeNames.Text.Html);
             alternateView.LinkedResources.Add(res);
             return alternateView;
@@ -155,6 +147,7 @@ namespace EmailGenerator
             else if (DateTime.Now.Day % 10 == 3 && DateTime.Now.Day != 13) return "rd";
             else return "th";
         }
+
 
     }
 }

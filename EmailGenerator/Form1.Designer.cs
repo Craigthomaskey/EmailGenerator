@@ -47,6 +47,7 @@
             this.GetAttachmentsBttn = new System.Windows.Forms.Button();
             this.AttachmentsList = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.TestBttn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.DataTabs.SuspendLayout();
@@ -284,12 +285,25 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Attachments";
             // 
+            // TestBttn
+            // 
+            this.TestBttn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TestBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestBttn.Location = new System.Drawing.Point(304, 290);
+            this.TestBttn.Name = "TestBttn";
+            this.TestBttn.Size = new System.Drawing.Size(65, 24);
+            this.TestBttn.TabIndex = 6;
+            this.TestBttn.Text = "Test";
+            this.TestBttn.UseVisualStyleBackColor = true;
+            this.TestBttn.Click += new System.EventHandler(this.TestBttn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 322);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.TestBttn);
             this.Controls.Add(this.SendBttn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
@@ -335,6 +349,7 @@
         private System.Windows.Forms.Button GetAttachmentsBttn;
         private System.Windows.Forms.ListBox AttachmentsList;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button TestBttn;
     }
 }
 
