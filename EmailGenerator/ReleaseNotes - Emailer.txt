@@ -1,5 +1,10 @@
 ﻿Change Notes - Emailer
 
+Emailer (0.0.1.4)
+Revision 4 Bug Fixes
+1.	Fixed issue causing program to fail when releasing temp file
+2.	fixed bug causing crash if filler results fill is not avalible
+
 Emailer (0.0.1.1)
 Build 1 Release
 1.	Added release notes file list

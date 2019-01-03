@@ -71,7 +71,6 @@
             "Just for testing"});
             this.RelaseNotesList.Location = new System.Drawing.Point(5, 9);
             this.RelaseNotesList.Name = "RelaseNotesList";
-            this.RelaseNotesList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RelaseNotesList.Size = new System.Drawing.Size(123, 91);
             this.RelaseNotesList.TabIndex = 0;
             // 

@@ -38,7 +38,7 @@ namespace EmailGenerator
             GetAttachmentsBttn.PerformClick();
             StartEmailBody();
         }
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)        {            if (File.Exists(tempPath)) File.Delete(tempPath);        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)        { if (res != null) res.Dispose();      if (File.Exists(tempPath)) File.Delete(tempPath);        }
 
         private void SendBttn_Click(object sender, EventArgs e)
         {
@@ -111,7 +111,8 @@ namespace EmailGenerator
                 message.Subject = "Filler Results - " + DateTime.Now.ToString("dddd, MMMM dd") + DaySuffix();
                 message.From = new System.Net.Mail.MailAddress("craig.key@wiklundtradingllc.com");
                 message.IsBodyHtml = true;
-                message.AlternateViews.Add(getEmbeddedImage(FillerResultsFile));
+                if (File.Exists(FillerResultsFile)) message.AlternateViews.Add(getEmbeddedImage(FillerResultsFile));
+                else return "No Results file.";
 
                 Attachment Attchmnt = new Attachment(tempPath);
                 Attchmnt.Name = "ReleaseNotes.txt";
@@ -124,12 +125,12 @@ namespace EmailGenerator
                 smtp.Send(message);
                 return "Email Sent";
             }
-            catch(Exception e)            {                return "Email Failed - " + e.ToString();            }
+            catch (Exception e) { return "Email Failed - " + e.ToString(); }
         }
-
+        LinkedResource res;
         private AlternateView getEmbeddedImage(String filePath)
         {
-            LinkedResource res = new LinkedResource(filePath);
+            res = new LinkedResource(filePath);
             res.ContentId = "FillerResults" + DateTime.Now.ToString("yyy-MM-dd");
             res.ContentType = new ContentType("image/bmp");           
             string htmlBody = EmailBox.Text.Replace(Environment.NewLine, "<br />");
