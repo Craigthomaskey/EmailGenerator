@@ -38,7 +38,15 @@ namespace EmailGenerator
             GetAttachmentsBttn.PerformClick();
             StartEmailBody();
         }
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)        { if (res != null) res.Dispose();      if (File.Exists(tempPath)) File.Delete(tempPath);        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //try
+           // {
+                if (res != null) res.Dispose();
+                if (File.Exists(tempPath)) File.Delete(tempPath);
+           // }
+         //   catch { }
+        }
 
         private void SendBttn_Click(object sender, EventArgs e)
         {
@@ -123,6 +131,9 @@ namespace EmailGenerator
                 smtp.Credentials = new NetworkCredential("craig.key@wiklundtradingllc.com", "Ct251603*");
                 smtp.EnableSsl = true;
                 smtp.Send(message);
+
+                Attchmnt.Dispose();
+
                 return "Email Sent";
             }
             catch (Exception e) { return "Email Failed - " + e.ToString(); }
